@@ -1,0 +1,103 @@
+/* /frames */
+
+/* ---------- picker bar ---------- */
+.names { padding-bottom: 40px; }
+.cmp-bar {
+  position: sticky; top: 0; z-index: 30;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px;
+  padding: 10px var(--gutter);
+  background: var(--ink); color: var(--white);
+}
+.cmp-bar label { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.cmp-bar label span { font-family: var(--type); font-size: .72rem; color: var(--pink); }
+.cmp-bar label:last-child { text-align: right; }
+.cmp-bar select {
+  width: 100%;
+  appearance: none; -webkit-appearance: none;
+  border: 2px solid var(--pink); border-radius: 0;
+  background: transparent; color: var(--white);
+  font-family: var(--type); font-size: .95rem;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+.cmp-bar select:focus-visible { outline: 2px solid var(--white); outline-offset: 2px; }
+.cmp-bar option { color: var(--ink); background: var(--white); }
+.cmp-vs { font-style: italic; font-size: 1.4rem; color: var(--pink); }
+.cmp-hint {
+  margin: 0; padding: 8px var(--gutter); text-align: center;
+  background: var(--pink);
+  font-family: var(--type); font-size: .8rem;
+}
+
+/* ---------- the stage ---------- */
+.stage {
+  --pos: 50%;
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  touch-action: pan-y;
+  cursor: ew-resize;
+  user-select: none; -webkit-user-select: none;
+}
+.layer { grid-area: 1 / 1; min-width: 0; isolation: isolate; }
+.layer-b { clip-path: inset(0 0 0 var(--pos)); }
+.stage, .layer-b { background: inherit; }
+.layer a { pointer-events: none; }
+.handle {
+  position: absolute; top: 0; bottom: 0; left: var(--pos); z-index: 10;
+  width: 3px; margin-left: -1.5px;
+  background: var(--ink);
+  pointer-events: none;
+}
+.knob {
+  position: absolute; top: 50vh; left: 50%;
+  width: 54px; height: 54px; margin: -27px 0 0 -27px;
+  border-radius: 50%;
+  background: var(--ink); color: var(--pink);
+  display: grid; place-items: center;
+  font-size: 1.2rem; letter-spacing: -.05em;
+  box-shadow: 0 6px 16px rgba(0,0,0,.3);
+}
+.tag-ab {
+  position: absolute; top: 14px; z-index: 11;
+  font-family: var(--type); font-size: .8rem;
+  background: var(--ink); color: var(--pink);
+  padding: 4px 10px 2px;
+  pointer-events: none;
+}
+.tag-a { left: 12px; }
+.tag-b { right: 12px; }
+.cmp-range {
+  position: absolute; inset: auto 0 0 0; z-index: 12;
+  width: 100%; margin: 0; opacity: 0; height: 1px;
+}
+.cmp-range:focus-visible + .handle .knob { outline: 3px solid var(--pink-hot); outline-offset: 3px; }
+
+/* ---------- frames ---------- */
+
+/* pink paper behind */
+.f-mat .frame { position: relative; }
+.f-mat .mat {
+  position: absolute; inset: -18px -16px -20px -18px; z-index: 0;
+  background: var(--pink);
+  clip-path: var(--torn);
+  transform: rotate(-3deg);
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,.15));
+}
+.f-mat .print { position: relative; z-index: 1; }
+
+/* clean print */
+.f-clean .print {
+  clip-path: none;
+  padding: 12px;
+  transform: rotate(2deg);
+  box-shadow: 0 2px 4px rgba(0,0,0,.08), 0 20px 34px -18px rgba(0,0,0,.4);
+  filter: none;
+}
+
+@media (max-width: 760px) {
+  .cmp-bar { grid-template-columns: 1fr 1fr; }
+  .cmp-vs { display: none; }
+  .cmp-bar select { font-size: .85rem; padding: 7px 8px; }
+  .knob { top: 200px; width: 46px; height: 46px; margin: -23px 0 0 -23px; }
+}

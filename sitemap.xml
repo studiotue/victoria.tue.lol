@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://victoria.tue.lol/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <image:image><image:loc>https://victoria.tue.lol/assets/img/headshot.webp</image:loc></image:image>
+    <image:image><image:loc>https://victoria.tue.lol/assets/img/headshot-rj.webp</image:loc></image:image>
+    <image:image><image:loc>https://victoria.tue.lol/assets/img/heaven.webp</image:loc></image:image>
+    <image:image><image:loc>https://victoria.tue.lol/assets/img/mousetrap.webp</image:loc></image:image>
+    <image:image><image:loc>https://victoria.tue.lol/assets/img/collage-theatre.webp</image:loc></image:image>
+    <image:image><image:loc>https://victoria.tue.lol/assets/img/collage-joy.webp</image:loc></image:image>
+    <image:image><image:loc>https://victoria.tue.lol/assets/img/collage-act.webp</image:loc></image:image>
+  </url>
+</urlset>

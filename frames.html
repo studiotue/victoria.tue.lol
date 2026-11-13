@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo frames · Victoria Dawn Black</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=4.5">
+  <link rel="stylesheet" href="frames.css?v=3">
+</head>
+<body class="names">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="leaf" viewBox="0 0 200 300"><path d="M100 0C110 40 140 50 150 80C160 110 120 110 125 140C130 170 170 175 165 210C160 245 120 240 115 270L110 300H90C88 270 50 255 45 220C40 185 80 180 75 150C70 120 35 115 45 85C55 55 90 45 100 0Z"/></symbol>
+    <symbol id="blob" viewBox="0 0 180 170"><path d="M60 10C110-5 170 30 160 90C152 140 100 170 55 150C10 130-5 70 20 35C30 20 45 14 60 10Z"/></symbol>
+    <symbol id="star" viewBox="0 0 200 200"><path d="M100 0L118 62L178 30L140 86L200 104L138 120L170 178L112 142L96 200L82 140L24 172L60 118L0 96L62 82L28 24L86 58Z"/></symbol>
+    <symbol id="wave" viewBox="0 0 300 120"><path d="M0 60C30 10 60 10 90 60S150 110 180 60S240 10 270 60L300 60V120H0Z"/></symbol>
+    <symbol id="moon" viewBox="0 0 160 160"><path d="M110 8A76 76 0 1 0 152 110A62 62 0 1 1 110 8Z"/></symbol>
+  </svg>
+
+  <!-- pick any two -->
+  <header class="cmp-bar">
+    <label><span>left side</span><select id="pick-a"><option value="current">current (live now)</option><option value="no-tape">no tape</option><option value="pink-paper" selected>pink paper behind</option><option value="clean">clean print</option></select></label>
+    <p class="cmp-vs" aria-hidden="true">vs</p>
+    <label><span>right side</span><select id="pick-b"><option value="current">current (live now)</option><option value="no-tape">no tape</option><option value="pink-paper">pink paper behind</option><option value="clean" selected>clean print</option></select></label>
+  </header>
+  <p class="cmp-hint">drag across the page to compare · same page, just the photo frame changes</p>
+
+  <main class="stage">
+    <span class="tag-ab tag-a" aria-hidden="true"></span>
+    <span class="tag-ab tag-b" aria-hidden="true"></span>
+    <div class="layer layer-a">
+    <section class="cover">
+      <svg class="shape s-cover-1" aria-hidden="true"><use href="#leaf"/></svg>
+      <svg class="shape s-cover-2" aria-hidden="true"><use href="#star"/></svg>
+      <svg class="shape s-cover-3" aria-hidden="true"><use href="#wave"/></svg>
+
+      <div class="cover-type">
+        <ul class="labels" aria-label="What she does">
+          <li class="lb lb-1">actor</li>
+          <li class="lb lb-2">dramaturg</li>
+          <li class="lb lb-3">creative producer</li>
+        </ul>
+
+        <h1 class="name">
+          <span class="clip clip-v">Victoria</span>
+          <span class="clip clip-d">Dawn</span>
+          <span class="clip clip-b">Black</span>
+        </h1>
+
+
+        <div class="cover-cta">
+          <a class="btn" href="#hire">Work with Victoria</a>
+          <a class="btn btn-line" href="#resume">See the resume</a>
+        </div>
+        <p class="open"><span class="dot" aria-hidden="true"></span>Open to stage &amp; screen roles, dramaturgy, producing, arts leadership, and costume construction</p>
+      </div>
+
+      <figure class="cover-photo f-mat"><svg class="shape s-photo-blob" aria-hidden="true"><use href="#blob"/></svg><svg class="shape s-photo-moon" aria-hidden="true"><use href="#moon"/></svg><div class="frame"><div class="mat" aria-hidden="true"></div><div class="print"><img src="assets/img/headshot.webp" width="465" height="692" alt="Headshot of Victoria Dawn Black smiling, in a light blue top"></div></div><figcaption class="tag">Executive Director, Montani StageLab</figcaption></figure>
+    </section>
+    </div>
+    <div class="layer layer-b" aria-hidden="true">
+    <section class="cover">
+      <svg class="shape s-cover-1" aria-hidden="true"><use href="#leaf"/></svg>
+      <svg class="shape s-cover-2" aria-hidden="true"><use href="#star"/></svg>
+      <svg class="shape s-cover-3" aria-hidden="true"><use href="#wave"/></svg>
+
+      <div class="cover-type">
+        <ul class="labels" aria-label="What she does">
+          <li class="lb lb-1">actor</li>
+          <li class="lb lb-2">dramaturg</li>
+          <li class="lb lb-3">creative producer</li>
+        </ul>
+
+        <h1 class="name">
+          <span class="clip clip-v">Victoria</span>
+          <span class="clip clip-d">Dawn</span>
+          <span class="clip clip-b">Black</span>
+        </h1>
+
+
+        <div class="cover-cta">
+          <a class="btn" href="#hire">Work with Victoria</a>
+          <a class="btn btn-line" href="#resume">See the resume</a>
+        </div>
+        <p class="open"><span class="dot" aria-hidden="true"></span>Open to stage &amp; screen roles, dramaturgy, producing, arts leadership, and costume construction</p>
+      </div>
+
+      <figure class="cover-photo f-clean"><svg class="shape s-photo-blob" aria-hidden="true"><use href="#blob"/></svg><svg class="shape s-photo-moon" aria-hidden="true"><use href="#moon"/></svg><div class="print"><img src="assets/img/headshot.webp" width="465" height="692" alt="Headshot of Victoria Dawn Black smiling, in a light blue top"></div><figcaption class="tag">Executive Director, Montani StageLab</figcaption></figure>
+    </section>
+    </div>
+    <input class="cmp-range" type="range" min="0" max="100" value="50" step="1" aria-label="Compare the two versions">
+    <div class="handle" aria-hidden="true"><span class="knob">◂▸</span></div>
+  </main>
+
+  <script>
+    const takes = {"current": {"cls": "", "html": "<svg class=\"shape s-photo-blob\" aria-hidden=\"true\"><use href=\"#blob\"/></svg><svg class=\"shape s-photo-moon\" aria-hidden=\"true\"><use href=\"#moon\"/></svg><span class=\"tape tape-l\" aria-hidden=\"true\"></span><span class=\"tape tape-r\" aria-hidden=\"true\"></span><div class=\"print\"><img src=\"assets/img/headshot.webp\" width=\"465\" height=\"692\" alt=\"Headshot of Victoria Dawn Black smiling, in a light blue top\"></div><figcaption class=\"tag\">Executive Director, Montani StageLab</figcaption>"}, "no-tape": {"cls": "", "html": "<svg class=\"shape s-photo-blob\" aria-hidden=\"true\"><use href=\"#blob\"/></svg><svg class=\"shape s-photo-moon\" aria-hidden=\"true\"><use href=\"#moon\"/></svg><div class=\"print\"><img src=\"assets/img/headshot.webp\" width=\"465\" height=\"692\" alt=\"Headshot of Victoria Dawn Black smiling, in a light blue top\"></div><figcaption class=\"tag\">Executive Director, Montani StageLab</figcaption>"}, "pink-paper": {"cls": "f-mat", "html": "<svg class=\"shape s-photo-blob\" aria-hidden=\"true\"><use href=\"#blob\"/></svg><svg class=\"shape s-photo-moon\" aria-hidden=\"true\"><use href=\"#moon\"/></svg><div class=\"frame\"><div class=\"mat\" aria-hidden=\"true\"></div><div class=\"print\"><img src=\"assets/img/headshot.webp\" width=\"465\" height=\"692\" alt=\"Headshot of Victoria Dawn Black smiling, in a light blue top\"></div></div><figcaption class=\"tag\">Executive Director, Montani StageLab</figcaption>"}, "clean": {"cls": "f-clean", "html": "<svg class=\"shape s-photo-blob\" aria-hidden=\"true\"><use href=\"#blob\"/></svg><svg class=\"shape s-photo-moon\" aria-hidden=\"true\"><use href=\"#moon\"/></svg><div class=\"print\"><img src=\"assets/img/headshot.webp\" width=\"465\" height=\"692\" alt=\"Headshot of Victoria Dawn Black smiling, in a light blue top\"></div><figcaption class=\"tag\">Executive Director, Montani StageLab</figcaption>"}};
+    const stage = document.querySelector('.stage');
+    const range = document.querySelector('.cmp-range');
+    const picks = { a: document.getElementById('pick-a'), b: document.getElementById('pick-b') };
+
+    function setTake(side, key) {
+      const t = takes[key];
+      const fig = stage.querySelector('.layer-' + side + ' .cover-photo');
+      fig.className = ('cover-photo ' + t.cls).trim();
+      fig.innerHTML = t.html;
+      stage.querySelector('.tag-' + side).textContent = picks[side].selectedOptions[0].textContent;
+    }
+
+    // drag anywhere on the page
+    function moveTo(clientX) {
+      const r = stage.getBoundingClientRect();
+      const pct = Math.min(100, Math.max(0, (clientX - r.left) / r.width * 100));
+      stage.style.setProperty('--pos', pct + '%');
+      range.value = Math.round(pct);
+    }
+    let dragging = false;
+    stage.addEventListener('pointerdown', e => { if (e.target === range) return; dragging = true; stage.setPointerCapture(e.pointerId); moveTo(e.clientX); });
+    stage.addEventListener('pointermove', e => { if (dragging) moveTo(e.clientX); });
+    ['pointerup', 'pointercancel'].forEach(t => stage.addEventListener(t, () => dragging = false));
+    range.addEventListener('input', () => stage.style.setProperty('--pos', range.value + '%'));
+
+    for (const side of ['a', 'b']) {
+      picks[side].addEventListener('change', () => setTake(side, picks[side].value));
+    }
+
+    // shared links open the same pair
+    const [ha, hb] = location.hash.slice(1).split('/');
+    if (takes[ha]) picks.a.value = ha;
+    if (takes[hb]) picks.b.value = hb;
+    setTake('a', picks.a.value);
+    setTake('b', picks.b.value);
+  </script>
+</body>
+</html>
